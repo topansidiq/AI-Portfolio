@@ -1,0 +1,5 @@
+1. Tokenizer: converts text into numerical token IDs and converts generated IDs back into text. It also handles special tokens and chat formatting.
+
+2. Model: contains the neural network architecture and learned weights. During inference, it uses those weights to predict the next token.
+
+3. Generation: selects tokens from the model's predictions until it reaches a stopping condition, such as an end-of-turn token or token limit.

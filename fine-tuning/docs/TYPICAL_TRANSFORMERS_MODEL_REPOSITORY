@@ -1,0 +1,17 @@
+### Typical Transformers Model Repository Structure
+
+A typical Hugging Face Transformers model repository includes the following files:
+
+| File                           | Purpose                                            |
+| :----------------------------- | :------------------------------------------------- |
+| `config.json`                  | Model architecture and configuration               |
+| `model.safetensors`            | Learned model weights                              |
+| `model.safetensors.index.json` | Weight-to-shard mapping for sharded checkpoints    |
+| `tokenizer.json`               | Tokenizer vocabulary and processing data           |
+| `tokenizer_config.json`        | Tokenizer settings and special-token configuration |
+| `generation_config.json`       | Default generation parameters, if provided         |
+| `README.md`                    | Model card, usage, and limitations                 |
+
+> **Note:** A larger model may split its weights across several files, such as `model-00001-of-00004.safetensors`. The index file maps parameter names to their corresponding shards.
+>
+> A repository may omit some files or use alternative formats. Do not assume every model has exactly this structure.

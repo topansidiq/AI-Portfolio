@@ -1,0 +1,21 @@
+### Model Parameters and Memory Requirements
+
+The **0.5B** in a model name indicates approximately **0.5 billion parameters**. While parameter count provides a useful initial estimate of a model's size, it does not equal the total memory required during runtime.
+
+For instance, calculated for a model with 0.5 billion parameters stored in FP16 precision:
+
+$$0.5 \times 10^9 \times 2 \text{ bytes} = 1 \text{ GB}$$
+
+This $1\text{ GB}$ covers only the raw model weights. At inference time, additional memory is required for:
+
+- **Activations**
+- **Temporary execution buffers**
+- **Key-Value (KV) cache**
+- **Framework overhead**
+
+For training and fine-tuning, memory demands increase substantially to store:
+
+- **Gradients**
+- **Optimizer states** (e.g., AdamW state vectors)
+
+This significant memory overhead highlights the necessity of parameter-efficient training techniques like **LoRA** and **QLoRA**.
