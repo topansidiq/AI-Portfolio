@@ -1,0 +1,12 @@
+| Concept                 | Function                                                                                       |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
+| `input_ids`             | Input tokens provided to the model                                                             |
+| `labels`                | Target tokens used to compute the loss                                                         |
+| `logits`                | Raw, unnormalized prediction scores from the model                                             |
+| `loss`                  | Quantitative metric measuring the error between predictions and targets                        |
+| `gradient`              | Vector of partial derivatives indicating the direction and magnitude of parameter updates      |
+| `optimizer`             | Algorithm that updates model parameters based on computed gradients                            |
+| `learning rate`         | Hyperparameter that controls the step size of parameter updates during optimization            |
+| `epoch`                 | One full pass through the entire training dataset                                              |
+| `batch size`            | Number of training samples processed together in a single forward/backward pass                |
+| `gradient accumulation` | Technique to accumulate gradients over multiple micro-batches before executing a weight update |
